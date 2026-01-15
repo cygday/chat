@@ -33,14 +33,13 @@ button {
 }
 
 video {
-	width:50%:
+	width:50%;
 	height: 100vh;
 	object-fit: cover;
 }
 
 #controls {
 	position: fixed;
-	botton: 10px;
 	width: 100%;
 	text-align: cover;
 }
