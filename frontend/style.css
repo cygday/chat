@@ -1,7 +1,5 @@
 body {
 	margin:0;
-	background: #8a7b54;
-	color:white;
 	font-family: Arial;
 	display: flex;
 	justify-content: center;
@@ -22,9 +20,9 @@ button {
 	margin: 8px 0;
 	border: none;
 	border-radius: 8px;
-	background: #878682;
+	background: lab(54.17% 88.33 -47.28 / 0.623);
 	color: black;
-	font-size: 16px;
+	font-size: 25px;
 }
 
 #videos {
