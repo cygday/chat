@@ -30,7 +30,7 @@ function login(type) {
 
 //vc
 
-const socket = io();
+const socket = io("https://https://chat-wn1p.onrender.com");
 let pc;
 let localStream;
 
