@@ -7,6 +7,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	overflow:hidden;
 }
 
 .box {
@@ -29,19 +30,40 @@ button {
 
 #videos {
 	display: flex;
-	width: 100%;
+	position:fixed;
+	inset:0;
 }
 
 video {
 	width:50%;
-	height: 100vh;
+	height: 100%;
 	object-fit: cover;
 }
 
-#controls {
+
+#bottomBar {
 	position: fixed;
+	bottom: 15px;
+	left:0;
 	width: 100%;
-	text-align: cover;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 15px;
+	z-index: 10;
+}
+
+#controls {
+	margin:auto;
+	display: flex;
+	gap: 15px;
+}
+#controls button {
+	padding: 14px 22px;
+	border: radius 50px;
+	font-size:16px;
+	border:none;
+	background: #22c55e;
 }
 
 #chat {
@@ -51,4 +73,33 @@ video {
 	width: 30%;
 	height: 100%;
 	background: #f0eee9;
+	display: flex;
+	gap: 8px;
+}
+
+#chat input {
+	padding: 10px;
+	border-radius: 20px;
+	border:none;
+	width: 160px;
+}
+
+#chat #sendBtn {
+	padding: 10px 14px;
+	border-radius: 20px;
+	border:none;
+	background: #135797;
+	color: white;
+}
+
+
+/*mob fix*/
+
+@media (max-width: 768px) {
+	video {
+		width: 100%;
+	}
+	#chat {
+		width: 120px;
+	}
 }
