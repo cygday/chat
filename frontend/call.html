@@ -7,20 +7,20 @@
 </head>
 <body>
 	<div id="videos">
-		<video id="localVideo" autoplay muted playsinline></video>
-		<video id="remoteVideo" autoplay playsinline></video>
+		<video id="localVideo" autoplay muted playsinline style="width:1280px;height:720px;"></video>
+		<video id="remoteVideo" autoplay playsinline style="width:1280px;height:720px;"></video>
 
 	</div>
 
 	<div id="controls">
-	<button id="start"> start </button>
-	<button id="hangup"> hang up</button>
+	<button id="start" style="width:30%;height:10%;background:black;color:white;"> start </button><button id="hangup" style="width:30%;height:10%;background:black;color:white;"> hang up</button>
+	
 
 	</div>
 
 	<div id="chat">
 		<input id="msg" placeholder="Type message............."/>
-		<button onclick="sendMsg()">send</button>
+		<button onclick="sendMsg()" style="width:30%;height:10%;background:black;color:white;">send</button>
 		<div id="messages"></div>
 
 	</div>
