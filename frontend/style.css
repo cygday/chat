@@ -8,6 +8,8 @@ body {
 }
 
 .box {
+	background-image:url('wallpaper.jpg');
+	background-size: cover;
 	padding: 25px;
 	border-radius: 12px;
 	text-align: center;
