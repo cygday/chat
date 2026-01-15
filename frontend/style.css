@@ -1,4 +1,6 @@
 body {
+	background-image:url('wallpaper.jpg');
+	background-size: cover;
 	margin:0;
 	font-family: Arial;
 	display: flex;
@@ -8,8 +10,6 @@ body {
 }
 
 .box {
-	background-image:url('wallpaper.jpg');
-	background-size: cover;
 	padding: 25px;
 	border-radius: 12px;
 	text-align: center;
