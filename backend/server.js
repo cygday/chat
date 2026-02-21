@@ -31,3 +31,6 @@ socket.broadcast.emit("ice", c));
 
 server.listen(3000, () =>
 console.log("server running on 3000"));
+
+
+module.exports = app; 
