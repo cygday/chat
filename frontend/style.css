@@ -19,12 +19,17 @@ body {
 }
 
 .box {
-    padding: 25px;
+    /* Existing styles */
+    /*padding: 25px;
     border-radius: 12px;
     text-align: center;
-    width: 320px;
-    background: rgba(255, 255, 255, 0.2); /* Recommended: makes box visible over wallpaper */
-    backdrop-filter: blur(5px);           /* Glass effect */
+    width: 320px;*/
+
+    /* FORCE CENTER */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 button {
