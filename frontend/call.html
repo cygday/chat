@@ -5,25 +5,36 @@
 	<title>vc</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
-	<div id="videos">
+<body style="background-image:url('image.jpg');height:100vh;display:flex;flex-direction:column;align-items:center;font-family:sans-serif">
+<!--<div id="videos">
 		<video id="localVideo" autoplay muted playsinline></video>
 		<video id="remoteVideo" autoplay playsinline></video>
 
-	</div>
-<div id='bottomBar'
-	<div id="controls">
-	<button id="start"> start </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="hangup" style="background: #ef4444;"> hang up</button>
-	
+	</div>-->
+<div class="container" style="border:1px solid black; width: 800px;height:600px;">
 
-	</div>
+<div id="messages" style="height:300px;position :fixed;left:30%;top:50px;"></div>
 
-	<div id="chat">
-		<input id="msg" placeholder="Type message............."/>
-		<button onclick="sendMsg()" id="sendBtn" style="width:30%;height:10%;background:black;color:white;">send</button>
-		<div id="messages"></div>
+<div id="chat" style="
+	position:fixed;
+	bottom:30px;
+	left: 30%;">
+<input id="msg" placeholder="Type message..." style="width:400px;height:80px;"/>
+<button style="all: unset; cursor: pointer; color: white; background: red;border:1px solid black;height:80px;width:60px;text-align:center;" onclick="sendMsg()" id="sendBtn">Send</button>
+<br>
+<br><br>
+<button style="all: unset; cursor:pointer;margin-left:160px;padding:30px 30px 30px;border:1px solid black;background-color:black;color:white;" id="hangup"> hang up </button>
 
-	</div>
+</div>
+
+
+
+
+<!-- This is where messages will appear -->
+
+
+
+</div>
 
 	<script src="/socket.io/socket.io.js"></script>
 

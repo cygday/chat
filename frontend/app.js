@@ -76,13 +76,33 @@ document.getElementById('hangup')?.addEventListener('click', () => location.relo
 //chat
 
 function sendMsg() {
-    const msg = document.getElementById("msg").value;
-    socket.emit("chat", msg);
+    const msgInput = document.getElementById('msg');
+    const messagesContainer = document.getElementById('messages');
+    const username = "You"; // You can replace this with a real variable later
+
+    if (msgInput.value.trim() !== "") {
+        // Create the message element
+        const newMsg = document.createElement('div');
+        newMsg.className = 'msg-item';
+        
+        // Set the content: "Username: Message"
+        newMsg.innerHTML = `<strong>${username}:</strong> ${msgInput.value}`;
+
+        // Add to the container
+        messagesContainer.appendChild(newMsg);
+
+        // Auto-scroll to the bottom
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+        // Clear input
+        msgInput.value = "";
+    }
 }
 
-socket.on("chat", msg => {
-    const div = document.createElement("div");
-    div.innerText = msg;
-
-document.getElementById("messages").appendChild(div);
+// Optional: Send message when pressing "Enter" key
+document.getElementById('msg').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        sendMsg();
+    }
 });
+

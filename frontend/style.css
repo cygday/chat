@@ -38,79 +38,48 @@ button {
 	margin: 8px 0;
 	border: none;
 	border-radius: 8px;
-	background: lab(54.17% 88.33 -47.28 / 0.623);
+	background: red;
 	color: black;
 	font-size: 25px;
 }
 
-#videos {
-	display: flex;
-	position:fixed;
-	inset:0;
-}
-
-video {
-	width:50%;
-	height: 100%;
-	object-fit: cover;
-}
-
-
 #bottomBar {
-	position: fixed;
-	bottom: 10px;
-	left:0;
-	width: 100%;
-	padding: 0 15px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 15px;
-	z-index:999;
+    position: fixed;
+    bottom: 20px;         /* Distance from bottom */
+    left: 50%;            /* Move to the middle of the screen */
+    transform: translateX(-50%); /* Pull it back by half its width to center it */
+    
+    width: 320px;         /* Fixed width works better for centering buttons */
+    display: flex;
+    justify-content: space-evenly; /* Even space between buttons */
+    align-items: center;
+    padding: 10px;
+    z-index: 999;
+    
+    /* Optional: background to see the bar while testing */
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 50px;
 }
 
-#controls {
-	position:absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	display: flex;
-	gap: 15px;
-}
-#controls button {
-	padding: 14px 22px;
-	border-radius: 30px;
-	font-size:16px;
-	border:none;
-	cursor: pointer;
-}
-#controls button #start {
-	background: #135797;
+button {
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
-#controls button #hangup {
-	background: #ef4444;
-	color: white;
-}
-#chat {
-	display: flex;
-	gap: 8px;
-}
 
-#chat input {
-	padding: 10px 14px;
-	border-radius: 20px;
-	border:none;
-	width: 160px;
-}
+/*#hangup {
+    background: red;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}*/
 
-#chat #sendBtn {
-	padding: 10px 14px;
-	border-radius: 20px;
-	border:none;
-	background: #135797;
-	color: white;
-}
 
+
+#start { display: none; } /* Keeps it clean */
 
 /*mob fix*/
 
