@@ -1,22 +1,30 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	background-image:url('wallpaper.jpg');
-	background-size: cover;
-	width:100%;
-	height: 100%;
-	overflow:hidden;
+    background-image: url('wallpaper.jpg');
+    background-size: cover;
+    background-position: center; /* Ensures the image is centered */
+    width: 100%;
+    height: 100vh; /* Changed from 100% to 100vh to fill the screen */
+    overflow: hidden;
+    
+    /* ADD THESE 3 LINES TO CENTER THE BOX */
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
 }
 
 .box {
-	padding: 25px;
-	border-radius: 12px;
-	text-align: center;
-	width: 320px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 320px;
+    background: rgba(255, 255, 255, 0.2); /* Recommended: makes box visible over wallpaper */
+    backdrop-filter: blur(5px);           /* Glass effect */
 }
 
 button {
